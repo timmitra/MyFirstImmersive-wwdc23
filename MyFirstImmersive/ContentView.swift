@@ -33,7 +33,7 @@ struct ContentView: View {
             })
             Button("Open") {
                 Task {
-                    await openImmersiveScene(id: "ImmersiveScene")
+                    await openImmersiveScene(id: "ImmersiveSpace")
                 }
             }
 

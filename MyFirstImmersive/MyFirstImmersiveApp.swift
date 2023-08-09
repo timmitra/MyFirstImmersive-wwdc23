@@ -14,7 +14,7 @@ struct MyFirstImmersiveApp: App {
             ContentView()
         }.windowStyle(.volumetric)
         
-        ImmersiveScene(id: "ImmersiveScene") {
+        ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
     }
