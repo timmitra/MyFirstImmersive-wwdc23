@@ -13,5 +13,9 @@ struct MyFirstImmersiveApp: App {
         WindowGroup {
             ContentView()
         }.windowStyle(.volumetric)
+        
+        ImmersiveScene(id: "ImmersiveScene") {
+            ImmersiveView()
+        }
     }
 }

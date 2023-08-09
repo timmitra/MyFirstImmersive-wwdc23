@@ -12,6 +12,7 @@ import RealityKitContent
 struct ContentView: View {
 
     @State var enlarge = false
+    @Environment(\.openImmersiveSpace) var openImmersiveScene
 
     var body: some View {
         VStack {
@@ -30,9 +31,14 @@ struct ContentView: View {
             .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
                 enlarge.toggle()
             })
+            Button("Open") {
+                Task {
+                    await openImmersiveScene(id: "ImmersiveScene")
+                }
+            }
 
             VStack {
-                Toggle("Enlarge RealityView Content", isOn: $enlarge)
+                Toggle("Change Size", isOn: $enlarge)
                     .toggleStyle(.button)
             }.padding().glassBackgroundEffect()
         }
