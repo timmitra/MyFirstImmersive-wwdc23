@@ -16,7 +16,8 @@ struct ImmersiveView: View {
             if let scene = try? await Entity(named: "ImmersiveSpace", in: realityKitContentBundle) {
                 content.add(scene)
             }
-        }
+        }.offset(y:-600)
+            .offset(z: -2400)
     }
 }
 
